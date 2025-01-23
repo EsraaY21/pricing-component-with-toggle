@@ -17,7 +17,7 @@ body,
 main {
     background-color: var(--color-bg);
     min-height: 100vh;
-    background-image: url(assets/images/bg-top.svg), url(assets/images/bg-bottom.svg);
+    background-image: url(/assets/images/bg-top.svg), url(/assets/images/bg-bottom.svg);
     background-repeat: no-repeat, no-repeat;
     background-position: 100% 0%, 0% 100%;
     color: var(--color-text);
