@@ -17,9 +17,14 @@
     outline: none;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     padding: 4px;
     transition: all 0.3s ease-in-out;
+}
+
+.switch:hover {
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    transition: all 0.3s ease;
 }
 
 .switch-thumb {
@@ -28,10 +33,12 @@
     background-color: white;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateX(0);
+    transition: all 0.3s ease-in-out;
 }
 
-.switch[aria-checked="true"] {
-    justify-content: flex-end;
+.switch[aria-checked="true"] .switch-thumb {
+    transform: translateX(24px);
 }
 
 .label {
