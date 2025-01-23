@@ -4,7 +4,7 @@
     --color-text: #6E728E;
     --color-text-dark: #4A4D60;
     --color-bg: #F7F7FE;
-    --color-purple: #6D72DE
+    --color-purple: #6D72DE;
 }
 
 body,
@@ -58,6 +58,8 @@ h1 {
 
 .pricing_features_item {
     width: 100%;
+    box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+
 }
 
 .pricing_features_item h2 {
@@ -87,11 +89,20 @@ ul.pricing_features_item_list {
     border-bottom: 1px solid rgba(110, 114, 142, 0.25);
 }
 
+/* Read More Link  */
 .pricing_features_item_link {
     background: linear-gradient(135.06deg, #A2A7F0 -0.05%, #696EDD 100.05%);
     color: white;
     border-radius: 6px;
     padding: 14px 0px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.pricing_features_item_link:hover {
+    color: var(--color-purple);
+    border-color: var(--color-purple);
+    background: transparent;
 }
 
 
@@ -118,7 +129,6 @@ ul.pricing_features_item_list {
 .pricing_features_item:nth-child(2) {
     border-radius: 10px;
     background: linear-gradient(135.06deg, #A2A7F0 -0.05%, #696EDD 100.05%);
-    box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
     color: white;
     padding: 55px 31px;
 }
@@ -136,5 +146,12 @@ ul.pricing_features_item_list {
     background: white;
     color: var(--color-purple);
 }
+
+.pricing_features_item:nth-child(2) .pricing_features_item_link:hover {
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+
 
 /* ************ */
