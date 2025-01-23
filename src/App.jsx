@@ -4,9 +4,11 @@ import { useState } from "react";
 
 function App() {
   const [checked, setChecked] = useState(false);
+  // checked =>monthly
 
   const handleToggle = () => {
     setChecked((prev) => !prev);
+    console.log(checked);
   };
 
   const pricingData = [

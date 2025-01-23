@@ -3,7 +3,7 @@ import React from "react";
 export default function SwitchContainer({ checked, onToggle }) {
   return (
     <div className="switch-container">
-      <p className={`label ${!checked ? "active" : ""}`}>Monthly</p>
+      <p className={`label ${checked ? "active" : ""}`}>Annually</p>
       <button
         type="button"
         role="switch"
@@ -15,7 +15,7 @@ export default function SwitchContainer({ checked, onToggle }) {
           className={`switch-thumb ${checked ? "switch-thumb-checked" : ""}`}
         ></span>
       </button>
-      <p className={`label ${checked ? "active" : ""}`}>Annually</p>
+      <p className={`label ${!checked ? "active" : ""}`}>Monthly</p>
     </div>
   );
 }

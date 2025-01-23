@@ -33,12 +33,12 @@
     background-color: white;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transform: translateX(0);
+    transform: translateX(24px);
     transition: all 0.3s ease-in-out;
 }
 
 .switch[aria-checked="true"] .switch-thumb {
-    transform: translateX(24px);
+    transform: translateX(0);
 }
 
 .label {
