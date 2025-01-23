@@ -1,11 +1,140 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --color-red: #c73b0f;
-
+    --color-text: #6E728E;
+    --color-text-dark: #4A4D60;
+    --color-bg: #F7F7FE;
+    --color-purple: #6D72DE
 }
 
 body,
 * {
-    font-family: "Red Hat Text", sans-serif;
+    font-family: "Montserrat", serif;
 }
+
+main {
+    background-color: var(--color-bg);
+    min-height: 100vh;
+    background-image: url(assets/images/bg-top.svg), url(assets/images/bg-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 100% 0%, 0% 100%;
+    color: var(--color-text);
+    font-weight: 700;
+    background-attachment: fixed;
+}
+
+.pricing_section {
+    width: 87%;
+    max-width: 1050px;
+    margin-inline: auto;
+    padding-top: 71px;
+    padding-bottom: 103px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+.pricing_filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 40px;
+    margin-bottom: 64px;
+}
+
+.pricing_filter p {
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.pricing_features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing_features_item {
+    width: 100%;
+}
+
+.pricing_features_item h2 {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 24px;
+}
+
+.pricing_features_item h3.price {
+    font-size: 72px;
+    line-height: 71px;
+    margin-bottom: -2.16px;
+    color: var(--color-text-dark);
+}
+
+ul.pricing_features_item_list {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-top: 1px solid rgba(110, 114, 142, 0.25);
+
+}
+
+.pricing_features_item_list li {
+    font-size: 15px;
+    line-height: 28px;
+    padding: 12px 0px;
+    border-bottom: 1px solid rgba(110, 114, 142, 0.25);
+}
+
+.pricing_features_item_link {
+    background: linear-gradient(135.06deg, #A2A7F0 -0.05%, #696EDD 100.05%);
+    color: white;
+    border-radius: 6px;
+    padding: 14px 0px;
+}
+
+
+/* Left  */
+.pricing_features_item:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* Right  */
+.pricing_features_item:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Left and right  */
+.pricing_features_item:first-child,
+.pricing_features_item:last-child {
+    background-color: white;
+    padding: 31px;
+}
+
+/* Center  */
+.pricing_features_item:nth-child(2) {
+    border-radius: 10px;
+    background: linear-gradient(135.06deg, #A2A7F0 -0.05%, #696EDD 100.05%);
+    box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+    color: white;
+    padding: 55px 31px;
+}
+
+.pricing_features_item:nth-child(2) h3 {
+    color: white;
+}
+
+.pricing_features_item:nth-child(2) ul,
+.pricing_features_item:nth-child(2) li {
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.pricing_features_item:nth-child(2) .pricing_features_item_link {
+    background: white;
+    color: var(--color-purple);
+}
+
+/* ************ */

@@ -1,4 +1,33 @@
+import PricingArticle from "./components/PricingArticle";
+
 function App() {
+  const pricingData = [
+    {
+      type: "Basic",
+      monthlyPrice: "$19.99",
+      annualPrice: "$199.99",
+      storage: "500 GB Storage",
+      users: "2 Users Allowed",
+      sendLimit: "Send up to 3 GB",
+    },
+    {
+      type: "Professional",
+      monthlyPrice: "$24.99",
+      annualPrice: "$249.99",
+      storage: "1 TB Storage",
+      users: "5 Users Allowed",
+      sendLimit: "Send up to 10 GB",
+    },
+    {
+      type: "Master",
+      monthlyPrice: "$39.99",
+      annualPrice: "$399.99",
+      storage: "2 TB Storage",
+      users: "10 Users Allowed",
+      sendLimit: "Send up to 20 GB",
+    },
+  ];
+
   return (
     <>
       <main>
@@ -6,14 +35,16 @@ function App() {
           <h1>Our Pricing</h1>
           <div className="pricing_filter">
             <p>Annually</p>
-
             <p>Monthly</p>
           </div>
 
-          <div>
-            <article></article>
-            <article></article>
-            <article></article>
+          <div className="pricing_features">
+            {pricingData.map((pricingItem) => (
+              <PricingArticle
+                pricingItem={pricingItem}
+                key={pricingItem.type}
+              />
+            ))}
           </div>
         </section>
       </main>
@@ -22,30 +53,3 @@ function App() {
 }
 
 export default App;
-// Our Pricing
-// Annually
-// Monthly
-
-// Basic
-// &dollar;19.99
-// &dollar;199.99
-// 500 GB Storage
-// 2 Users Allowed
-// Send up to 3 GB
-// Learn More
-
-// Professional
-// &dollar;24.99
-// &dollar;249.99
-// 1 TB Storage
-// 5 Users Allowed
-// Send up to 10 GB
-// Learn More
-
-// Master
-// &dollar;39.99
-// &dollar;399.99
-// 2 TB Storage
-// 10 Users Allowed
-// Send up to 20 GB
-// Learn More
