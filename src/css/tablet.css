@@ -1,0 +1,13 @@
+@media (max-width: 1000px) {
+    main {
+        background-image: url(assets/images/bg-top.svg);
+        background-attachment: unset;
+        background-position: 55vw 0%;
+    }
+
+
+    .pricing_features {
+        flex-direction: column;
+        gap: 32px;
+    }
+}
