@@ -1,0 +1,46 @@
+.switch-container {
+    margin-top: 40px;
+    margin-bottom: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.switch {
+    width: 56px;
+    height: 32px;
+    background: var(--color-gradient);
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.switch-thumb {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.switch[aria-checked="true"] {
+    justify-content: flex-end;
+}
+
+.label {
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.label.active {
+    mix-blend-mode: normal;
+    opacity: 1;
+}

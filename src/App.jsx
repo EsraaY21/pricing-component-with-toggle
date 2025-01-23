@@ -1,6 +1,14 @@
 import PricingArticle from "./components/PricingArticle";
+import SwitchContainer from "./components/SwitchContainer";
+import { useState } from "react";
 
 function App() {
+  const [checked, setChecked] = useState(false);
+
+  const handleToggle = () => {
+    setChecked((prev) => !prev);
+  };
+
   const pricingData = [
     {
       type: "Basic",
@@ -33,11 +41,7 @@ function App() {
       <main>
         <section className="pricing_section">
           <h1>Our Pricing</h1>
-          <div className="pricing_filter">
-            <p>Annually</p>
-            <p>Monthly</p>
-          </div>
-
+          <SwitchContainer checked={checked} onToggle={handleToggle} />
           <div className="pricing_features">
             {pricingData.map((pricingItem) => (
               <PricingArticle
