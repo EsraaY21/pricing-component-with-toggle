@@ -47,6 +47,7 @@ function App() {
               <PricingArticle
                 pricingItem={pricingItem}
                 key={pricingItem.type}
+                checked={checked}
               />
             ))}
           </div>
