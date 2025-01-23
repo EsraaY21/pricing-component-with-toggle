@@ -63,6 +63,14 @@ h1 {
     line-height: 71px;
     margin-bottom: -2.16px;
     color: var(--color-text-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.pricing_features_item h3.price span {
+    font-size: 40px;
 }
 
 ul.pricing_features_item_list {

@@ -7,7 +7,10 @@ export default function PricingArticle({ pricingItem, checked }) {
   return (
     <article className="pricing_features_item">
       <h2>{type}</h2>
-      <h3 className="price">{checked ? annualPrice : monthlyPrice}</h3>
+      <h3 className="price">
+        <span>$</span>
+        {checked ? annualPrice : monthlyPrice}
+      </h3>
       <ul className="pricing_features_item_list">
         <li>{storage}</li>
         <li>{users}</li>
