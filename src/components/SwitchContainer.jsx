@@ -10,6 +10,7 @@ export default function SwitchContainer({ checked, onToggle }) {
         aria-checked={checked}
         className="switch"
         onClick={onToggle}
+        aria-label="Toggle Button"
       >
         <span
           className={`switch-thumb ${checked ? "switch-thumb-checked" : ""}`}
